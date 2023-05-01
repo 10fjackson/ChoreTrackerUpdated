@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Chore Chart Tracker Website</title>
+        <link rel="stylesheet" type="text/css" href="chores.css">
+    </head>
+    <body>
+        <section id="home">
+            <header>
+                <a href="/parallax.html" class="logo">Chore Tracker</a>
+                <ul>
+                    <li><a href="/parallax.html">Home</a></li>
+                    <li><a href="/chores.html">Create</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </header>
+            
+        </section>
+
+        <section id="parallax" class="my-5 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1>Chore List</h1>
+                        <p>Please fill out the form below to add a new chore:</p>
+                      
+                        <form onsubmit="submitForm(event)">
+                          <label for="chore">Chore:</label>
+                          <input type="text" id="chore" name="chore" placeholder="Enter a chore...">
+                          <br><br>
+                          <label for="frequency">Frequency:</label>
+                          <select id="frequency" name="frequency">
+                            <option value="31">Daily</option>
+                            <option value="15">Every other day</option>
+                            <option value="8">Twice a week</option>
+                            <option value="4">Once a week</option>
+                            <option value="2">Bi-weekly</option>
+                            <option value="1">Once a month</option>
+                          </select>                          
+                          <br><br>
+                              <center>
+                                  <input type="button" value="Add Chore" onclick="addChore()">
+                              <input type="button" value="Clear List" onclick="clearList()">
+                              <input type="submit" value="Submit" onclick="submitForm()">
+                              </center>
+                        </form>
+                        <h1>Chore List</h1>
+                        <ul id="choreList">
+                        </ul>
+                        <script src="chores.js"></script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

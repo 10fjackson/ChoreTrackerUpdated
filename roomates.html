@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Chore Chart Tracker Website</title>
+        <link rel="stylesheet" type="text/css" href="roomates.css">
+    </head>
+    <body>
+        <section id="home">
+            <header>
+                <a href="/parallax.html" class="logo">Chore Tracker</a>
+                <ul>
+                    <li><a href="/parallax.html">Home</a></li>
+                    <li><a href="/chores.html">Create</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </header>
+            
+        </section>
+
+        <section id="parallax" class="my-5 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                      <h1>Roommate List</h1>
+                      <p>Please fill out the form below to add a new roommate:</p>
+                    
+                      <form onsubmit="submitForm(event)">
+                        <label for="roommate">Roommate:</label>
+                        <input type="text" id="roommate" name="roommate" placeholder="Enter your roommate's name...">
+                        <br><br>
+                            <center>
+                            <input type="button" value="Add Roommate" onclick="addRoommate()">
+                            <input type="button" value="Clear List" onclick="clearList()">
+                                <br>
+                                <br>
+                                <input type="submit" value="Create calendar" onclick="submitForm()">
+                            </center>
+                      </form>
+                    
+                      <h2>Roommate List</h2>
+                      <ul id="roommateList">
+                      </ul>
+                      <script src="roommates.js"></script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
