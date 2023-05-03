@@ -35,17 +35,22 @@ function createCalendar(choreList, roommateList) {
               const choreContainer = document.createElement('div');
               choreContainer.className = 'chore-container';
 
-              const choreName = document.createElement('span');
+              const choreTable = document.createElement('table');
+              choreTable.className = 'chore-table';
+
+              const choreRow = document.createElement('tr');
+              const choreName = document.createElement('td');
               choreName.className = 'chore-name';
               choreName.textContent = choreItem.chore;
-              choreContainer.appendChild(choreName);
+              choreRow.appendChild(choreName);
 
               const roommateIndex = (choreIndex + i) % roommateList.length;
-              const roommateName = document.createElement('span');
-              roommateName.className = 'roommate-name';
+              const roommateName = document.createElement('td');
               roommateName.textContent = roommateList[roommateIndex];
-              choreContainer.appendChild(roommateName);
+              choreRow.appendChild(roommateName);
 
+              choreTable.appendChild(choreRow);
+              choreContainer.appendChild(choreTable);
               calendarCell.appendChild(choreContainer);
             }
           }

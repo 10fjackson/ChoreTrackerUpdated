@@ -12,7 +12,7 @@ var choreList = [];
 		updateChoreList();
 		console.log("Updated Chore List:", choreList);
  	}
-  */
+  
 
 	 function addChore() {
 		// Get the chore input and frequency input
@@ -40,6 +40,35 @@ var choreList = [];
 		// Update the chore list display
 		updateChoreList();
 	}
+	*/
+
+	function addChore() {
+		// Get the chore input and frequency input
+		var choreInput = document.getElementById("chore");
+		var frequencyInput = document.getElementById("frequency");
+	  
+		// Get the chore and frequency values
+		var chore = choreInput.value;
+		var frequency = parseInt(frequencyInput.value, 10); // Make sure the frequency value is a number
+	  
+		// Create a new chore object with chore, frequency, and index
+		var newChore = {
+		  chore: chore,
+		  frequency: frequency,
+		  index: choreList.length, // Set the index to the current length of the choreList
+		};
+	  
+		// Add the new chore object to the choreList
+		choreList.push(newChore);
+	  
+		// Clear the input fields
+		choreInput.value = "";
+		frequencyInput.value = "";
+	  
+		// Update the chore list display
+		updateChoreList();
+	  }
+	  
 		function clearList() {
 			choreList = [];
 			updateChoreList();
