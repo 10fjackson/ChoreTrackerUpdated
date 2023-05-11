@@ -74,7 +74,7 @@ section
 #home
 {
     background-image: url("bg2.jpeg");
-    max-height: 600px;
+    max-height: 100px;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
